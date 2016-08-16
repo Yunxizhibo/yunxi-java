@@ -5,12 +5,12 @@
 
 ### 1.初始化
 ```java
-   YunxiApi.register(AccessKey, SecretKey);
+   YunxiApi.register(AccessKey , SecretKey);
 ```
 
 ### 2.获取活动列表
 ```java
-   YunxiApi.getActivityList(page,pageSize,timestamp);
+   YunxiApi.getActivityList(page , pageSize , timestamp);
 ```  
 #### 返回数据(json)：
 ```json
@@ -40,7 +40,7 @@
 
 ### 3.获取活动资料
 ```java
-   YunxiApi.getActivityInfo(activityId,timestamp);
+   YunxiApi.getActivityInfo(activityId , timestamp);
 ```  
 
 #### 返回数据(json)：
@@ -59,7 +59,7 @@
 
 ### 4.获取直播视频资料
 ```java
-   YunxiApi.getActivityLiveStream(activityId,timestamp);
+   YunxiApi.getActivityLiveStream(activityId , timestamp);
 ```  
 #### 返回数据(json)：
 ```json
