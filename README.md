@@ -72,20 +72,20 @@
                 "streamId":"流ID",
                 "paid":"直播套餐 3为免费版 2为专业版",
                 "coverUrl":"封面地址",
-                "commentAudit":"是否开启评论审核 0 关闭 1 开启"
-                "publishUrl":"推流地址"
+                "commentAudit":"是否开启评论审核 0 关闭 1 开启",
+                "publishUrl":"推流地址",
                 "hlsLiveUrl":"HLS 协议视频地址",
-                "rtmpLiveUrl":"RTMP 协议视频地址"
+                "rtmpLiveUrl":"RTMP 协议视频地址",
                 "hlsPlaybackUrl":"原视频回放地址 当回放视频需要替代是请用replacePlayBackUrl",
                 "replacePlayBackUrl":"视频回放地址 当该地址为NULL时用hlsPlayBackUrl 反之用replacePlayBackUrl回放地址",
                 "snapshot":"截屏封面",
                 "startedAt":"直播开始时间",
                 "enddAt":"直播结束时间"
             },
-            "wechatPlayUrl":"微信嵌入地址"
-            "webPlayUrl":"网页嵌入地址"
-            "appPlayUrl":"app嵌入地址"
-            "embedPlayerUrl":"播放器嵌入地址"
+            "wechatPlayUrl":"微信嵌入地址",
+            "webPlayUrl":"网页嵌入地址",
+            "appPlayUrl":"app嵌入地址",
+            "embedPlayerUrl":"播放器嵌入地址",
             "totalNum":"围观人数"
         }
      }
