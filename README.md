@@ -1,5 +1,5 @@
 ### 云犀直播JAVA-SDK, 官方API部分
-@author  holger <whjsjq@gmail.com>
+@author  holger <wanghj@yunxi.tv>
 @link
 @version 1.0
 
@@ -11,7 +11,7 @@
 ### 2.获取活动列表
 ```java
    YunxiApi.getActivityList(page , pageSize , timestamp);
-```  
+```
 #### 返回数据(json)：
 ```json
    {
@@ -41,7 +41,7 @@
 ### 3.获取活动资料
 ```java
    YunxiApi.getActivityInfo(activityId , timestamp);
-```  
+```
 
 #### 返回数据(json)：
 ```json
@@ -60,7 +60,7 @@
 ### 4.获取直播视频资料
 ```java
    YunxiApi.getActivityLiveStream(activityId , timestamp);
-```  
+```
 #### 返回数据(json)：
 ```json
     {
@@ -90,4 +90,115 @@
         }
      }
 ```
- 
+
+### 5.获取直播视频评论列表
+```java
+YunxiApi.getCommentsList(lsId, page, pageSize, timestamp);
+```
+#### 返回数据(json)：
+```json
+{
+	"statusCode": "状态码(int型)",
+	"data": {
+		"comments": [{
+				"id": "评论ID",
+				"userId": "评论用户id",
+				"username": "评论用户名",
+				"avatar": "评论头像",
+				"content": "评论内容",
+				"floor": "评论楼层",
+				"createdAt": "评论时间"
+				"official": "0 用户评论 1 官方评论 2 商户红包 3 用户红包 4 用户领取红包提示 "
+			},
+			{
+				...
+			},
+			{
+				...
+			}
+		],
+		"pageCount": "总页数"
+	}
+}
+```
+
+### 6.保存直播视频评论
+```java
+YunxiApi.saveComment(lsId, 62968005, "十有八九", avatar, content, timestamp);
+```
+#### 返回数据(json)：
+```json
+{
+	"statusCode": "状态码(int型)",
+	"data": {
+		"comment" {
+			"id": "评论ID"
+			"userId": "评论用户id",
+			"username": "评论用户名",
+			"avatar": "评论头像",
+			"content": "评论内容",
+			"floor": "评论楼层",
+			"createdAt": "评论时间"
+		}
+	}
+}
+```
+
+### 7.直播同步白名单评论
+```java
+YunxiApi.saveWhitelist(activityId, name, mobile, timestamp);
+```
+#### 返回数据(json)：
+```json
+{
+	"statusCode": "状态码(int型)",
+	"data": {}
+}
+```
+
+### 8.第三方用户登录
+```java
+YunxiApi.userLogin(username, name, mobile, appUserId, avatar, gender, returnUrl, timestamp);
+```
+#### 返回数据：
+
+ 登录成功后返回returnUrl页⾯ 
+
+### 9.获取用户详资料
+```java
+YunxiApi.getUserInfo(appUserId, timestamp);
+```
+#### 返回数据(json)：
+```json
+{
+	"statusCode": "状态码(int型)",
+	"data": {
+		"user": {
+			"id": 2341791245,
+			"appUserId": "2341791233",
+			"username": "测试",
+			"avatar": "用户头像地址",
+			"gender": "1"
+		}
+	}
+}
+```
+
+### 10.更新用户信息
+```java
+YunxiApi.updateUserInfo(username, name, mobile, appUserId, avatar, gender, timestamp);
+```
+#### 返回数据(json)：
+```json
+{
+	"statusCode": "状态码(int型)",
+	"data": {
+		"user": {
+			"id": 2341791245,
+			"appUserId": "2341791233",
+			"username": "测试",
+			"avatar": "用户头像地址",
+			"gender": "1"
+		}
+	}
+```
